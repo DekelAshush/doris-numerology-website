@@ -1,0 +1,64 @@
+/* Global language classes applied to <html> by LanguageContext */
+.lang-he {
+    direction: rtl;
+}
+
+.lang-en {
+    direction: ltr;
+}
+
+/* Base document tweaks per language */
+.lang-he body {
+    text-align: right;
+    font-family: "Rubik", "Heebo", Arial, sans-serif;
+}
+
+.lang-en body {
+    text-align: left;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+/* Use logical properties so spacing follows writing direction automatically */
+body {
+    margin: 0;
+    padding-inline: 0;
+    color: white;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Global typography improvements */
+h1, h2, h3, h4, h5, h6 {
+    color: rgba(255, 255, 255, 0.95);
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+p {
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 1rem;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+button:focus,
+a:focus {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+}
+
+/* Selection styles */
+::selection {
+    background: rgba(102, 126, 234, 0.3);
+    color: white;
+}
+
+::-moz-selection {
+    background: rgba(102, 126, 234, 0.3);
+    color: white;
+}
+

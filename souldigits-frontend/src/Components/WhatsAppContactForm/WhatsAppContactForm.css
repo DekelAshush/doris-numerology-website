@@ -1,0 +1,64 @@
+/* WhatsApp Contact Form */
+.wa-form {
+  max-width: 520px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.wa-form__title {
+  margin: 0 0 1rem 0;
+  font-size: 1.25rem;
+}
+
+.wa-form__row {
+  display: grid;
+  gap: 0.25rem;
+  margin-block: 0.75rem;
+}
+
+.wa-form__label {
+  font-weight: 600;
+}
+
+.wa-form__input {
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding-block: 0.5rem;
+  padding-inline: 0.75rem;
+  font-size: 1rem;
+}
+
+.wa-form__input.has-error {
+  border-color: #ef4444;
+}
+
+.wa-form__error {
+  color: #ef4444;
+  font-size: 0.875rem;
+}
+
+.wa-form__actions {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.wa-form__submit {
+  background-color: #25D366;
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding-block: 0.6rem;
+  padding-inline: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.wa-form__submit:hover {
+  background-color: #128C7E;
+}

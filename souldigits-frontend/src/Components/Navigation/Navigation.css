@@ -1,0 +1,121 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    height: 60px;
+}
+
+/* Navigation links - perfectly centered in the header */
+.nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Language toggle - positioned on the left */
+.lang-toggle {
+    flex-shrink: 0;
+}
+
+/* Links */
+.navbar a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+/* Active link */
+.navbar a.active {
+    color: #fff;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.2);
+    border-block-end: 2px solid rgba(255, 255, 255, 0.8);
+}
+
+/* Hover */
+.navbar a:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-2px);
+}
+
+/* Lang toggle */
+.lang-toggle {
+    padding-block: 6px;
+    padding-inline: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    color: rgba(255, 255, 255, 0.9);
+    transition: all 0.3s ease;
+}
+
+/* Animation states (kept as-is) */
+.slide-left {
+    transform: translateX(0);
+}
+
+.slide-right {
+    transform: translateX(0); /* keep it stationary */
+}
+
+/* Hover */
+.lang-toggle:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0 15px;
+    }
+    
+    .nav-links {
+        gap: 0.5rem;
+    }
+    
+    .navbar a {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+    
+    .lang-toggle {
+        padding-block: 4px;
+        padding-inline: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 10px;
+    }
+    
+    .nav-links {
+        gap: 0.25rem;
+        flex-wrap: wrap;
+    }
+    
+    .navbar a {
+        padding: 4px 6px;
+        font-size: 0.75rem;
+    }
+    
+    .lang-toggle {
+        padding-block: 3px;
+        padding-inline: 6px;
+        font-size: 0.8rem;
+    }
+}
