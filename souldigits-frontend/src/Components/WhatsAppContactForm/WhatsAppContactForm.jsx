@@ -57,7 +57,8 @@ function WhatsAppContactForm() {
     
     // Always send to backend: it will send to business WhatsApp number
     try {
-      const response = await fetch('/api/whatsapp/send', {
+      const apiUrl = import.meta.env.VITE_API_URL || '';
+      const response = await fetch(`${apiUrl}/api/whatsapp/send`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
