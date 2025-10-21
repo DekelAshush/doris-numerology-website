@@ -77,12 +77,6 @@ npm start
 - **Glassmorphism Cards**: Modern transparent card designs with backdrop blur
 - **RTL/LTR Support**: Seamless switching between Hebrew and English layouts
 
-## 👤 About
-
-Created by Doris Tzadok - Professional Numerologist
-- 35+ years of educational leadership
-- Certified NLP Practitioner and Master
-- Specialized training in numerology from Persona College, Herzliya
 
 ## 📧 Contact
 
