@@ -6,7 +6,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon --watch ./ --ext js,json --signal SIGTERM server.js"
+    "dev": "nodemon --watch ./ --ext js,json,env --signal SIGTERM server.js"
   },
   "dependencies": {
     "cors": "^2.8.5",

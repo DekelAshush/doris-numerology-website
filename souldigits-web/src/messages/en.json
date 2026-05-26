@@ -1,0 +1,85 @@
+{
+  "Metadata": {
+    "title": "Doris Numerology",
+    "description": "Professional numerology readings and spiritual guidance by Doris."
+  },
+  "Navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "switchToHebrew": "עברית",
+    "switchToEnglish": "English",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "Home": {
+    "title": "Welcome to the Mystical World of Numerology",
+    "subtitle": "Discover Your Life's Hidden Patterns",
+    "description": "I am Doris, a professional numerologist dedicated to helping you unlock the secrets of numbers and their profound influence on your life journey. Through ancient wisdom and modern insight, I guide you toward understanding your true purpose and potential.",
+    "services": "Explore My Services",
+    "about": "Learn About Me",
+    "feature1Title": "Life Path Numbers",
+    "feature1Body": "Discover your core life purpose and destiny through your birth date.",
+    "feature2Title": "Personal Readings",
+    "feature2Body": "Get personalized insights into your relationships, career, and life decisions.",
+    "feature3Title": "Spiritual Guidance",
+    "feature3Body": "Connect with your higher self and find clarity in life's challenges.",
+    "dorisAlt": "Doris - Professional Numerologist",
+    "trustLine": "40+ years of experience in education and personal guidance"
+  },
+  "About": {
+    "title": "About Doris",
+    "subtitle": "Your Guide to the Mystical World of Numbers",
+    "introduction": "Welcome to my world of numerology, where ancient wisdom meets modern insight to illuminate your life's path.",
+    "storyTitle": "My Journey",
+    "storyContent": "For over 15 years, I have dedicated my life to studying the profound connections between numbers and human destiny. My journey began when I discovered how the numbers in my own birth date revealed patterns that explained my life experiences and guided me toward my true calling.",
+    "approachTitle": "My Approach",
+    "approachContent": "Each reading is a sacred journey of discovery. I combine traditional numerological methods with intuitive insights to provide you with practical guidance that you can apply to your daily life. My goal is to empower you with knowledge and clarity.",
+    "credentialsTitle": "My Credentials",
+    "credentialsContent": "I am a certified numerologist with extensive training in both Western and Eastern numerological traditions. I have helped thousands of individuals discover their life path numbers, understand their personal year cycles, and make informed decisions about their future.",
+    "ctaTitle": "Ready to Discover Your Numbers?",
+    "ctaBody": "Let's begin your journey of self-discovery and spiritual growth.",
+    "ctaButton": "Book a Reading"
+  },
+  "Services": {
+    "title": "Our Services",
+    "subtitle": "Discover Your Path Through Numerology",
+    "description": "I believe that every person is born with unique potential and a purpose in life. Numerology is a powerful tool that can help us understand our personal map, where our strengths lie, what our challenges are, and how we can live more fulfilling and meaningful lives.",
+    "servicesTitle": "What I Offer",
+    "items": [
+      {
+        "title": "Personal Numerology Consultation",
+        "description": "In-depth analysis of your personal numbers and revealing the potential, challenges, and opportunities in your life."
+      },
+      {
+        "title": "Important Life Decisions",
+        "description": "Guidance in making important decisions about location, relationships, and career paths."
+      }
+    ]
+  },
+  "Testimonials": {
+    "title": "Testimonials",
+    "body": "Hear what our clients have to say about working with us. Your success is our priority."
+  },
+  "Contact": {
+    "title": "Contact Us",
+    "body": "Fill out the form below and we'll reach out on WhatsApp.",
+    "trustLine": "40+ years of experience — personal, caring guidance"
+  },
+  "WhatsAppForm": {
+    "heading": "Contact via WhatsApp",
+    "floatingCta": "Contact",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "phone": "Phone number",
+    "service": "Desired service",
+    "servicePlaceholder": "e.g. Numerology reading, Coaching, Consultancy",
+    "submit": "Send on WhatsApp",
+    "required": "This field is required",
+    "invalidPhone": "Enter a valid Israeli phone number (e.g. 0512345678)",
+    "success": "Message sent",
+    "error": "Error sending message"
+  }
+}
