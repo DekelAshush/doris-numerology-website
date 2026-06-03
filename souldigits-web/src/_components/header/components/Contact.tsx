@@ -20,6 +20,13 @@ function Contact() {
         >
           {t("privacyLink")}
         </Link>
+        <span className="mx-2 text-white/40">·</span>
+        <Link
+          href="/terms"
+          className="underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
+        >
+          {t("termsLink")}
+        </Link>
       </p>
     </div>
   );

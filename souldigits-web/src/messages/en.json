@@ -82,7 +82,8 @@
     "title": "Contact Us",
     "body": "Fill out the form below and we'll reach out on WhatsApp.",
     "trustLine": "40+ years of experience — personal, caring guidance",
-    "privacyLink": "Privacy Policy"
+    "privacyLink": "Privacy Policy",
+    "termsLink": "Terms of Service"
   },
   "Privacy": {
     "title": "Privacy Policy",
@@ -125,6 +126,50 @@
       {
         "title": "Contact Us",
         "body": "For privacy questions or requests, contact Doris Numerology through the contact form on this website or via WhatsApp after submitting an inquiry."
+      }
+    ]
+  },
+  "Terms": {
+    "title": "Terms of Service",
+    "metaDescription": "Terms of service for Doris Numerology website and numerology consultation services.",
+    "lastUpdated": "Last updated: June 2, 2026",
+    "intro": "These Terms of Service (\"Terms\") govern your use of the Doris Numerology website and related services. By using this website or submitting the contact form, you agree to these Terms.",
+    "sections": [
+      {
+        "title": "Acceptance of Terms",
+        "body": "By accessing or using this website, you confirm that you have read, understood, and agree to be bound by these Terms. If you do not agree, please do not use the website."
+      },
+      {
+        "title": "Services",
+        "body": "Doris Numerology provides numerology consultations, guidance, and related informational services. All content and sessions are for personal insight and educational purposes only.\n\nOur services do not constitute medical, psychological, legal, or financial advice. You should not rely on numerology readings as a substitute for professional advice in those areas."
+      },
+      {
+        "title": "Use of the Website",
+        "body": "You agree to use this website lawfully and only for its intended purpose—learning about our services and contacting us regarding numerology consultations.\n\nYou may not misuse the contact form, attempt to disrupt the website, or submit false or misleading information."
+      },
+      {
+        "title": "Contact Form and WhatsApp",
+        "body": "When you submit the contact form, you authorize us to contact you via WhatsApp or phone at the number you provide, in order to respond to your inquiry.\n\nMessage delivery depends on WhatsApp, your device, and applicable third-party services. We are not responsible for delays or failures caused by third-party platforms."
+      },
+      {
+        "title": "No Guarantees",
+        "body": "Numerology readings and guidance are subjective and interpretive. We do not guarantee specific outcomes, accuracy of predictions, or results from following any advice received during a consultation."
+      },
+      {
+        "title": "Intellectual Property",
+        "body": "All website content—including text, images, branding, and design—is owned by Doris Numerology or used with permission. You may not copy, reproduce, or distribute website content without prior written consent."
+      },
+      {
+        "title": "Limitation of Liability",
+        "body": "To the fullest extent permitted by law, Doris Numerology shall not be liable for any indirect, incidental, or consequential damages arising from your use of the website or services.\n\nYour use of the website and any consultations is at your own discretion and risk."
+      },
+      {
+        "title": "Changes to These Terms",
+        "body": "We may update these Terms from time to time. The \"Last updated\" date at the top of this page reflects the latest version. Continued use of the website after changes means you accept the updated Terms."
+      },
+      {
+        "title": "Contact",
+        "body": "For questions about these Terms, contact Doris Numerology through the contact form on this website or via WhatsApp after submitting an inquiry."
       }
     ]
   },
