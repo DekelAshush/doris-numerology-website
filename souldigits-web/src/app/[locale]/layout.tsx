@@ -9,7 +9,7 @@ import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { Inter, Heebo } from "next/font/google";
 import Header from "@/_components/header/Header";
-import { routing } from "@/i18n/routing";
+import { getActiveLocales } from "@/i18n/locales";
 import "@/_styles/globals.css";
 
 const inter = Inter({
@@ -28,7 +28,7 @@ type Props = {
 };
 
 export function generateStaticParams() {
-  return routing.locales.map((locale) => ({ locale }));
+  return getActiveLocales().map((locale) => ({ locale }));
 }
 
 export const viewport: Viewport = {
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = await params;
 
-  if (!hasLocale(routing.locales, locale)) {
+  if (!hasLocale(getActiveLocales(), locale)) {
     notFound();
   }
 

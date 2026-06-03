@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
+import { isEnglishEnabled } from "@/i18n/locales";
 import WhatsAppContactForm from "@/_components/WhatsAppContactForm/WhatsAppContactForm";
 import WhatsAppFloatingButton from "@/_components/WhatsAppContactForm/WhatsAppFloatingButton";
 import Logo from "./components/Logo";
@@ -76,6 +77,7 @@ export default function Header() {
   const locale = useLocale();
   const pathname = usePathname();
   const otherLocale = locale === "en" ? "he" : "en";
+  const showLanguageSwitcher = isEnglishEnabled();
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -119,14 +121,16 @@ export default function Header() {
           </div>
 
           <div className="flex shrink-0 items-center gap-2">
-            <Link
-              href="/"
-              locale={otherLocale}
-              className="rounded-md border border-gold/30 bg-white/10 px-2 py-1 text-xs text-white/90 transition-all duration-300 hover:bg-white/20 hover:text-white md:px-3 md:py-1.5 md:text-sm"
-              aria-label="Switch language"
-            >
-              {locale === "en" ? t("switchToHebrew") : t("switchToEnglish")}
-            </Link>
+            {showLanguageSwitcher ? (
+              <Link
+                href="/"
+                locale={otherLocale}
+                className="rounded-md border border-gold/30 bg-white/10 px-2 py-1 text-xs text-white/90 transition-all duration-300 hover:bg-white/20 hover:text-white md:px-3 md:py-1.5 md:text-sm"
+                aria-label="Switch language"
+              >
+                {locale === "en" ? t("switchToHebrew") : t("switchToEnglish")}
+              </Link>
+            ) : null}
 
             <div className="md:hidden">
               <button
@@ -179,14 +183,16 @@ export default function Header() {
                   className="py-3 text-base"
                 />
               ))}
-              <Link
-                href="/"
-                locale={otherLocale}
-                onClick={closeMenu}
-                className="mt-2 rounded-lg border-t border-gold/20 px-4 py-3 text-base font-medium text-gold transition-colors hover:bg-white/10"
-              >
-                {locale === "en" ? t("switchToHebrew") : t("switchToEnglish")}
-              </Link>
+              {showLanguageSwitcher ? (
+                <Link
+                  href="/"
+                  locale={otherLocale}
+                  onClick={closeMenu}
+                  className="mt-2 rounded-lg border-t border-gold/20 px-4 py-3 text-base font-medium text-gold transition-colors hover:bg-white/10"
+                >
+                  {locale === "en" ? t("switchToHebrew") : t("switchToEnglish")}
+                </Link>
+              ) : null}
             </div>
           </div>
         ) : null}
