@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import {
   getMessages,
@@ -31,6 +31,11 @@ export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
+export const viewport: Viewport = {
+  themeColor: "#4a3f7a",
+  colorScheme: "dark",
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "Metadata" });
@@ -55,9 +60,9 @@ export default async function LocaleLayout({ children, params }: Props) {
     <html
       lang={locale}
       dir={locale === "he" ? "rtl" : "ltr"}
-      className={`${inter.variable} ${heebo.variable} h-full antialiased`}
+      className={`${inter.variable} ${heebo.variable} h-full min-h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col">
+      <body className="flex min-h-full min-h-[100dvh] flex-col">
         <NextIntlClientProvider messages={messages}>
           <Header />
         </NextIntlClientProvider>

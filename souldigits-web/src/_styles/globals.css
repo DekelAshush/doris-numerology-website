@@ -12,17 +12,30 @@
 
 html {
   scroll-behavior: smooth;
+  min-height: 100%;
+  background-color: #4a3f7a;
+}
+
+/* Fixed gradient layer — iOS Safari ignores background-attachment: fixed on body */
+html::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+  background: linear-gradient(135deg, #4a3f7a 0%, #5b4b8a 40%, #764ba2 100%);
+  pointer-events: none;
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+  min-height: 100dvh;
+  min-height: -webkit-fill-available;
   position: relative;
   color: white;
   font-size: 16px;
   line-height: 1.6;
-  background: linear-gradient(135deg, #4a3f7a 0%, #5b4b8a 40%, #764ba2 100%);
-  background-attachment: fixed;
+  background-color: #4a3f7a;
 }
 
 body::before {
