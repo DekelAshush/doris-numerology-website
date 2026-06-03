@@ -13,6 +13,7 @@ import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
 import Privacy from "./components/Privacy";
 import Terms from "./components/Terms";
+import Footer from "./components/Footer";
 
 const navItems = [
   { href: "/", key: "home" as const },
@@ -100,7 +101,7 @@ export default function Header() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <>
+    <div className="flex min-h-full flex-1 flex-col">
       <header className="sticky top-0 z-[1000] w-full min-h-[60px] border-b border-gold/20 bg-white/10 backdrop-blur-md px-2.5 md:px-4">
         <nav className="relative flex h-[60px] items-center justify-between px-3 md:px-5">
           <Logo />
@@ -196,7 +197,9 @@ export default function Header() {
         {pathname === "/contact" ? <WhatsAppContactForm /> : null}
       </main>
 
+      <Footer />
+
       {pathname !== "/contact" ? <WhatsAppFloatingButton /> : null}
-    </>
+    </div>
   );
 }

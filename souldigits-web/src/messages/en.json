@@ -14,6 +14,10 @@
     "openMenu": "Open menu",
     "closeMenu": "Close menu"
   },
+  "Footer": {
+    "privacyLink": "Privacy Policy",
+    "termsLink": "Terms of Service"
+  },
   "Home": {
     "title": "Welcome to the Mystical World of Numerology",
     "subtitle": "Discover Your Life's Hidden Patterns",
@@ -81,9 +85,7 @@
   "Contact": {
     "title": "Contact Us",
     "body": "Fill out the form below and we'll reach out on WhatsApp.",
-    "trustLine": "40+ years of experience — personal, caring guidance",
-    "privacyLink": "Privacy Policy",
-    "termsLink": "Terms of Service"
+    "trustLine": "40+ years of experience — personal, caring guidance"
   },
   "Privacy": {
     "title": "Privacy Policy",

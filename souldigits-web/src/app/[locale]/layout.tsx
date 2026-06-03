@@ -57,7 +57,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       dir={locale === "he" ? "rtl" : "ltr"}
       className={`${inter.variable} ${heebo.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">
+      <body className="flex min-h-full flex-col">
         <NextIntlClientProvider messages={messages}>
           <Header />
         </NextIntlClientProvider>
