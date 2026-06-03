@@ -8,9 +8,20 @@ dotenv.config();
 const app = express();
 const port = process.env.PORT || 3001;
 
-// CORS configuration for production
+// CORS: FRONTEND_URL can be one URL or comma-separated (e.g. prod + local dev)
+const allowedOrigins = (process.env.FRONTEND_URL || "http://localhost:3000")
+  .split(",")
+  .map((url) => url.trim())
+  .filter(Boolean);
+
 const corsOptions = {
-  origin: process.env.FRONTEND_URL || "http://localhost:3000",
+  origin(origin, callback) {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+      return;
+    }
+    callback(null, false);
+  },
   credentials: true,
 };
 

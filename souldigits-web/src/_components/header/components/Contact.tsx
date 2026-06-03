@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 function Contact() {
   const t = useTranslations("Contact");
@@ -12,6 +13,14 @@ function Contact() {
       </h1>
       <p className="mb-2 text-lg leading-relaxed text-white/85">{t("body")}</p>
       <p className="text-base text-gold/90">{t("trustLine")}</p>
+      <p className="mt-6 text-sm text-white/70">
+        <Link
+          href="/privacy"
+          className="underline decoration-gold/40 underline-offset-4 transition-colors hover:text-gold"
+        >
+          {t("privacyLink")}
+        </Link>
+      </p>
     </div>
   );
 }

@@ -65,36 +65,35 @@ const sendMessage = async (req, res) => {
           text: { body: textBody },
         };
 
-        try {
-          // 🟢 נוסיף את ההדפסות פה
-          console.log("📩 Payload sent to Meta:", payload);
-          console.log("🌍 URL:", url);
-          console.log("🔐 Token starts with:", token.slice(0, 10));
-        
-          const response = await fetch(url, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': `Bearer ${token}`,
-            },
-            body: JSON.stringify(payload),
-          });
-        
-          const data = await response.json();
-          console.log("📥 Meta response:", data); // 🟢 נוסיף גם את זה
-        
-          if (!response.ok) {
-            return res.status(response.status).json({ error: 'WhatsApp API error', details: data });
-          }
-        
-          return res.json({ ok: true, data });
-        } catch (err) {
-          return res.status(500).json({ error: 'Internal error', details: String(err) });
-        }
-        
+    console.log('📩 Sending WhatsApp message to Meta:', { to: recipient, type: payload.type });
+    console.log('🌍 URL:', url);
+    console.log('🔐 Token starts with:', token.slice(0, 10));
 
-    return res.json({ ok: true, data });
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify(payload),
+    });
+
+    const data = await response.json();
+    console.log('📥 Meta response:', data);
+
+    if (!response.ok) {
+      console.error('❌ WhatsApp message failed:', data);
+      return res.status(response.status).json({ error: 'WhatsApp API error', details: data });
+    }
+
+    const messageId = data?.messages?.[0]?.id;
+    console.log('✅ WhatsApp message sent successfully');
+    if (messageId) console.log('   Message ID:', messageId);
+    console.log('   To:', recipient);
+
+    return res.json({ ok: true, messageId, data });
   } catch (err) {
+    console.error('❌ WhatsApp send internal error:', err);
     return res.status(500).json({ error: 'Internal error', details: String(err) });
   }
 };

@@ -11,6 +11,7 @@ import About from "./components/About";
 import Services from "./components/Services";
 import Testimonials from "./components/Testimonials";
 import Contact from "./components/Contact";
+import Privacy from "./components/Privacy";
 
 const navItems = [
   { href: "/", key: "home" as const },
@@ -30,6 +31,8 @@ function PageContent({ pathname }: { pathname: string }) {
       return <Testimonials />;
     case "/contact":
       return <Contact />;
+    case "/privacy":
+      return <Privacy />;
     case "/":
     default:
       return <Home />;

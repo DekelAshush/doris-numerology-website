@@ -80,17 +80,23 @@ function WhatsAppContactForm() {
         }),
       });
 
+      const text = await response.text();
+      let responseData: Record<string, unknown> = {};
+      try {
+        responseData = text ? JSON.parse(text) : {};
+      } catch {
+        responseData = text ? { message: text } : {};
+      }
+
       if (!response.ok) {
-        const text = await response.text();
-        let errorData: Record<string, unknown> = {};
-        try {
-          errorData = text ? JSON.parse(text) : {};
-        } catch {
-          errorData = text ? { message: text } : {};
-        }
-        console.error("API Error:", response.status, errorData);
+        console.error("❌ WhatsApp API error:", response.status, responseData);
         throw new Error("Failed sending WhatsApp message");
       }
+
+      console.log("✅ WhatsApp message sent successfully", {
+        messageId: responseData.messageId,
+        ok: responseData.ok,
+      });
 
       setStatus("success");
       setFirstName("");

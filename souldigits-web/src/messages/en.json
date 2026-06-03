@@ -66,7 +66,52 @@
   "Contact": {
     "title": "Contact Us",
     "body": "Fill out the form below and we'll reach out on WhatsApp.",
-    "trustLine": "40+ years of experience — personal, caring guidance"
+    "trustLine": "40+ years of experience — personal, caring guidance",
+    "privacyLink": "Privacy Policy"
+  },
+  "Privacy": {
+    "title": "Privacy Policy",
+    "metaDescription": "Privacy policy for Doris Numerology, including how we handle contact form data and WhatsApp messaging.",
+    "lastUpdated": "Last updated: June 2, 2026",
+    "intro": "Doris Numerology (\"we\", \"us\") respects your privacy. This policy explains how this website handles your privacy, especially regarding the contact form and WhatsApp.",
+    "sections": [
+      {
+        "title": "Information We Collect",
+        "body": "We do not collect or store personal information on this website."
+      },
+      {
+        "title": "How We Use Your Information",
+        "body": "The contact form is used only to send your inquiry to us via WhatsApp so we can respond to your request about numerology services.\n\nBy submitting the form, you agree that we may contact you at the phone number you provided to respond to your inquiry."
+      },
+      {
+        "title": "WhatsApp Messaging",
+        "body": "Our website uses the WhatsApp Business Platform (provided by Meta) to deliver your inquiry to Doris Numerology. When you submit the contact form:\n\n• Your name, phone number, and message details are sent through Meta's WhatsApp API so we can receive and respond to your request.\n• Meta processes this data according to the WhatsApp Privacy Policy (https://www.whatsapp.com/legal/privacy-policy) and Meta's terms.\n• We use WhatsApp only to handle inquiries you initiate through our website—not for unsolicited marketing messages.\n• Message delivery depends on WhatsApp and your device settings."
+      },
+      {
+        "title": "Sharing of Information",
+        "body": "We do not sell or rent your personal information.\n\nWe share data only with service providers needed to operate the website and contact flow (for example, hosting providers and Meta/WhatsApp for message delivery), and only to the extent required for those services."
+      },
+      {
+        "title": "Data Retention",
+        "body": "We do not store personal information on our website servers. WhatsApp messages are retained according to WhatsApp settings and Meta's policies."
+      },
+      {
+        "title": "Your Rights and Opt-Out",
+        "body": "You may:\n\n• Choose not to submit the contact form if you do not want us to contact you via WhatsApp or phone.\n• Ask us to stop contacting you at any time by replying to a WhatsApp message.\n\nTo exercise these rights, contact us via WhatsApp."
+      },
+      {
+        "title": "Security",
+        "body": "Inquiries from the website are transmitted securely according to the WhatsApp Business API (Meta) security protocol."
+      },
+      {
+        "title": "Changes to This Policy",
+        "body": "We may update this privacy policy from time to time. The \"Last updated\" date at the top of this page will reflect the latest version. Continued use of the website after changes means you accept the updated policy."
+      },
+      {
+        "title": "Contact Us",
+        "body": "For privacy questions or requests, contact Doris Numerology through the contact form on this website or via WhatsApp after submitting an inquiry."
+      }
+    ]
   },
   "WhatsAppForm": {
     "heading": "Contact via WhatsApp",
