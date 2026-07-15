@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
 import { sendMessage } from './Controllers/sendMessage.js';
+import { verifyWebhook, handleWebhook } from './Controllers/webhook.js';
 
 dotenv.config();
 
@@ -32,6 +33,10 @@ app.use(express.json());
 app.get('/api/health', (req, res) => {
   res.json({ ok: true });
 });
+
+// WhatsApp webhook (Meta verification + incoming events)
+app.get('/api/whatsapp/webhook', verifyWebhook);
+app.post('/api/whatsapp/webhook', handleWebhook);
 
 // POST /api/whatsapp/send - delegate to controller
 app.post('/api/whatsapp/send', sendMessage);
