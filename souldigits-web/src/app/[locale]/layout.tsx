@@ -9,7 +9,10 @@ import { hasLocale } from "next-intl";
 import { notFound } from "next/navigation";
 import { Inter, Heebo } from "next/font/google";
 import Header from "@/_components/header/Header";
+import JsonLd from "@/_components/seo/JsonLd";
 import { getActiveLocales } from "@/i18n/locales";
+import { getSiteUrl } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/seo";
 import "@/_styles/globals.css";
 
 const inter = Inter({
@@ -41,8 +44,16 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return {
-    title: t("title"),
-    description: t("description"),
+    metadataBase: new URL(getSiteUrl()),
+    ...buildPageMetadata({
+      locale,
+      title: t("title"),
+      description: t("description"),
+    }),
+    title: {
+      default: t("title"),
+      template: t("titleTemplate"),
+    },
   };
 }
 
@@ -55,6 +66,7 @@ export default async function LocaleLayout({ children, params }: Props) {
 
   setRequestLocale(locale);
   const messages = await getMessages();
+  const t = await getTranslations({ locale, namespace: "Metadata" });
 
   return (
     <html
@@ -63,6 +75,7 @@ export default async function LocaleLayout({ children, params }: Props) {
       className={`${inter.variable} ${heebo.variable} h-full min-h-full antialiased`}
     >
       <body className="flex min-h-full min-h-[100dvh] flex-col">
+        <JsonLd locale={locale} description={t("description")} />
         <NextIntlClientProvider messages={messages}>
           <Header />
         </NextIntlClientProvider>

@@ -1,7 +1,8 @@
 {
   "Metadata": {
-    "title": "Doris Numerology",
-    "description": "Professional numerology readings and spiritual guidance by Doris."
+    "title": "Doris Tzadok | Professional Numerology",
+    "titleTemplate": "%s | Doris Tzadok Numerology",
+    "description": "Doris Tzadok is a professional numerologist with 40+ years of experience. Personal numerology readings, life decision guidance, and spiritual coaching. Contact us to book a session."
   },
   "Navigation": {
     "home": "Home",
@@ -19,7 +20,7 @@
     "termsLink": "Terms of Service"
   },
   "Home": {
-    "title": "Welcome to the Mystical World of Numerology",
+    "title": "Doris Tzadok – Professional Numerology",
     "subtitle": "Discover Your Life's Hidden Patterns",
     "description": "I am Doris, a professional numerologist dedicated to helping you unlock the secrets of numbers and their profound influence on your life journey. Through ancient wisdom and modern insight, I guide you toward understanding your true purpose and potential.",
     "services": "Explore My Services",
@@ -30,10 +31,12 @@
     "feature2Body": "Get personalized insights into your relationships, career, and life decisions.",
     "feature3Title": "Spiritual Guidance",
     "feature3Body": "Connect with your higher self and find clarity in life's challenges.",
-    "dorisAlt": "Doris - Professional Numerologist",
+    "dorisAlt": "Doris Tzadok – Professional Numerologist",
     "trustLine": "40+ years of experience in education and personal guidance"
   },
   "About": {
+    "metaTitle": "About Doris Tzadok | Professional Numerologist",
+    "metaDescription": "Meet Doris Tzadok, a professional numerologist with decades of experience in education, NLP, and numerology. Personal guidance for self-discovery and growth.",
     "title": "About Doris",
     "subtitle": "Your Guide to the Mystical World of Numbers",
     "introduction": "Welcome to my world of numerology, where ancient wisdom meets modern insight to illuminate your life's path.",
@@ -48,6 +51,8 @@
     "ctaButton": "Book a Reading"
   },
   "Services": {
+    "metaTitle": "Numerology Services | Doris Tzadok",
+    "metaDescription": "Personal numerology consultations and guidance for important life decisions in relationships, career, and location — with Doris Tzadok.",
     "title": "Our Services",
     "subtitle": "Discover Your Path Through Numerology",
     "description": "I believe that every person is born with unique potential and a purpose in life. Numerology is a powerful tool that can help us understand our personal map, where our strengths lie, what our challenges are, and how we can live more fulfilling and meaningful lives.",
@@ -64,6 +69,8 @@
     ]
   },
   "Testimonials": {
+    "metaTitle": "Client Testimonials | Doris Tzadok Numerology",
+    "metaDescription": "Real client testimonials about numerology sessions with Doris Tzadok — accuracy, sensitivity, and professionalism.",
     "title": "Testimonials",
     "body": "Real recommendations from clients — shared via WhatsApp",
     "chatTitle": "Client recommendations",
@@ -83,13 +90,15 @@
     ]
   },
   "Contact": {
+    "metaTitle": "Contact | Doris Tzadok Numerology",
+    "metaDescription": "Contact Doris Tzadok to book a personal numerology session. Fill out the form and we'll reach out on WhatsApp.",
     "title": "Contact Us",
     "body": "Fill out the form below and we'll reach out on WhatsApp.",
     "trustLine": "40+ years of experience — personal, caring guidance"
   },
   "Privacy": {
     "title": "Privacy Policy",
-    "metaDescription": "Privacy policy for Doris Numerology, including how we handle contact form data and WhatsApp messaging.",
+    "metaDescription": "Privacy policy for Doris Tzadok Numerology, including how we handle contact form data and WhatsApp messaging.",
     "lastUpdated": "Last updated: June 2, 2026",
     "intro": "Doris Numerology (\"we\", \"us\") respects your privacy. This policy explains how this website handles your privacy, especially regarding the contact form and WhatsApp.",
     "sections": [
@@ -133,7 +142,7 @@
   },
   "Terms": {
     "title": "Terms of Service",
-    "metaDescription": "Terms of service for Doris Numerology website and numerology consultation services.",
+    "metaDescription": "Terms of service for the Doris Tzadok Numerology website and numerology consultation services.",
     "lastUpdated": "Last updated: June 2, 2026",
     "intro": "These Terms of Service (\"Terms\") govern your use of the Doris Numerology website and related services. By using this website or submitting the contact form, you agree to these Terms.",
     "sections": [
