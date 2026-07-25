@@ -24,7 +24,23 @@ const handleWebhook = (req, res) => {
   if (body?.object === 'whatsapp_business_account') {
     for (const entry of body.entry || []) {
       for (const change of entry.changes || []) {
-        console.log('WhatsApp webhook event:', change.field, JSON.stringify(change.value));
+        const value = change.value || {};
+        for (const status of value.statuses || []) {
+          const line = {
+            status: status.status,
+            recipient: status.recipient_id,
+            messageId: status.id,
+            errors: status.errors,
+          };
+          if (status.status === 'failed') {
+            console.error('❌ WhatsApp delivery FAILED:', line);
+          } else {
+            console.log('WhatsApp delivery status:', line);
+          }
+        }
+        if (!value.statuses?.length) {
+          console.log('WhatsApp webhook event:', change.field, JSON.stringify(value));
+        }
       }
     }
   }

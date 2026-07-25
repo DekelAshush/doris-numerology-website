@@ -1,10 +1,20 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import fs from 'fs';
+import path from 'path';
+import { fileURLToPath } from 'url';
 import { sendMessage } from './Controllers/sendMessage.js';
 import { verifyWebhook, handleWebhook } from './Controllers/webhook.js';
 
-dotenv.config();
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const envPath = path.join(__dirname, '.env');
+if (fs.existsSync(envPath)) {
+  const parsed = dotenv.parse(fs.readFileSync(envPath));
+  for (const [key, value] of Object.entries(parsed)) {
+    process.env[key] = value;
+  }
+}
 
 const app = express();
 const port = process.env.PORT || 3001;
@@ -42,7 +52,13 @@ app.post('/api/whatsapp/webhook', handleWebhook);
 app.post('/api/whatsapp/send', sendMessage);
 
 app.listen(port, () => {
+  const whatsappReady = Boolean(
+    process.env.WHATSAPP_TOKEN &&
+      process.env.WHATSAPP_PHONE_NUMBER_ID &&
+      process.env.WHATSAPP_BUSINESS_NUMBER,
+  );
   console.log(`Backend listening on http://localhost:${port}`);
+  console.log(`WhatsApp API: ${whatsappReady ? 'ready' : 'not configured — check .env'}`);
 });
 
 

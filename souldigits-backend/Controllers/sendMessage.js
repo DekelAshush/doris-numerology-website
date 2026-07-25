@@ -37,7 +37,16 @@ const sendMessage = async (req, res) => {
   const phoneNumberId = process.env.WHATSAPP_PHONE_NUMBER_ID;
   const businessNumber = process.env.WHATSAPP_BUSINESS_NUMBER;
   if (!token || !phoneNumberId || !businessNumber) {
-    return res.status(500).json({ error: 'Server not configured for WhatsApp API' });
+    const missing = [
+      !token && 'WHATSAPP_TOKEN',
+      !phoneNumberId && 'WHATSAPP_PHONE_NUMBER_ID',
+      !businessNumber && 'WHATSAPP_BUSINESS_NUMBER',
+    ].filter(Boolean);
+    console.error('WhatsApp env missing:', missing.join(', '));
+    return res.status(500).json({
+      error: 'Server not configured for WhatsApp API',
+      missing,
+    });
   }
 
   const recipient = String(to || businessNumber);
@@ -46,24 +55,54 @@ const sendMessage = async (req, res) => {
     : buildMessage({ firstName, lastName, phone, service, lang });
   const url = `https://graph.facebook.com/v20.0/${phoneNumberId}/messages`;
 
+  const envTemplateName = process.env.WHATSAPP_TEMPLATE_NAME?.trim();
+  const envTemplateLang = process.env.WHATSAPP_TEMPLATE_LANGUAGE?.trim() || 'he';
+  const useEnvTemplate = Boolean(envTemplateName && hasStructured && !hasRawBody);
+
   try {
-    const payload = wantsTemplate
-      ? {
-          messaging_product: 'whatsapp',
-          to: recipient,
-          type: 'template',
-          template: {
-            name: templateName.trim(),
-            language: { code: (languageCode || 'en_US') },
-            // components: [] // add if your template requires variables
-          },
-        }
-      : {
-          messaging_product: 'whatsapp',
-          to: recipient,
-          type: 'text',
-          text: { body: textBody },
-        };
+    let payload;
+    if (wantsTemplate) {
+      payload = {
+        messaging_product: 'whatsapp',
+        to: recipient,
+        type: 'template',
+        template: {
+          name: templateName.trim(),
+          language: { code: (languageCode || 'en_US') },
+        },
+      };
+    } else if (useEnvTemplate) {
+      payload = {
+        messaging_product: 'whatsapp',
+        to: recipient,
+        type: 'template',
+        template: {
+          name: envTemplateName,
+          language: { code: envTemplateLang },
+          components: [
+            {
+              type: 'body',
+              parameters: [
+                { type: 'text', text: String(firstName).trim() },
+                { type: 'text', text: String(lastName).trim() },
+                { type: 'text', text: String(phone).trim() },
+                { type: 'text', text: String(service).trim() },
+              ],
+            },
+          ],
+        },
+      };
+    } else {
+      console.warn(
+        'Sending plain text — WhatsApp may not deliver without a 24h window. Set WHATSAPP_TEMPLATE_NAME for reliable delivery.',
+      );
+      payload = {
+        messaging_product: 'whatsapp',
+        to: recipient,
+        type: 'text',
+        text: { body: textBody },
+      };
+    }
 
     console.log('📩 Sending WhatsApp message to Meta:', { to: recipient, type: payload.type });
     console.log('🌍 URL:', url);
