@@ -20,17 +20,27 @@ const verifyWebhook = (req, res) => {
 
 const handleWebhook = (req, res) => {
   const body = req.body;
+  console.log('WhatsApp webhook POST received', {
+    object: body?.object,
+    entries: body?.entry?.length ?? 0,
+  });
 
   if (body?.object === 'whatsapp_business_account') {
     for (const entry of body.entry || []) {
       for (const change of entry.changes || []) {
         const value = change.value || {};
         for (const status of value.statuses || []) {
+          const errors = (status.errors || []).map((e) => ({
+            code: e.code,
+            title: e.title,
+            message: e.message,
+            details: e.error_data?.details,
+          }));
           const line = {
             status: status.status,
             recipient: status.recipient_id,
             messageId: status.id,
-            errors: status.errors,
+            errors: errors.length ? errors : undefined,
           };
           if (status.status === 'failed') {
             console.error('❌ WhatsApp delivery FAILED:', line);
@@ -43,6 +53,8 @@ const handleWebhook = (req, res) => {
         }
       }
     }
+  } else if (body && Object.keys(body).length > 0) {
+    console.warn('WhatsApp webhook unexpected payload:', JSON.stringify(body));
   }
 
   return res.sendStatus(200);

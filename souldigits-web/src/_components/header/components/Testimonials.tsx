@@ -5,12 +5,12 @@ import WhatsAppTestimonialBubble from "./WhatsAppTestimonialBubble";
 
 type TestimonialItem = {
   text: string;
+  sender: string;
 };
 
 function Testimonials() {
   const t = useTranslations("Testimonials");
   const items = t.raw("items") as TestimonialItem[];
-  const sender = t("anonymousSender");
 
   return (
     <div className="mx-auto min-h-[60vh] max-w-4xl px-4 py-8 text-white">
@@ -38,7 +38,6 @@ function Testimonials() {
             <p className="text-sm font-semibold text-[#e9edef]">
               {t("chatTitle")}
             </p>
-            <p className="text-xs text-[#8696a0]">{t("chatSubtitle")}</p>
           </div>
         </div>
 
@@ -54,7 +53,7 @@ function Testimonials() {
             <WhatsAppTestimonialBubble
               key={index}
               text={item.text}
-              sender={sender}
+              sender={item.sender}
             />
           ))}
         </div>

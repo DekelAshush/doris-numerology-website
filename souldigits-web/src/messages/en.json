@@ -25,12 +25,6 @@
     "description": "I am Doris, a professional numerologist dedicated to helping you unlock the secrets of numbers and their profound influence on your life journey. Through ancient wisdom and modern insight, I guide you toward understanding your true purpose and potential.",
     "services": "Explore My Services",
     "about": "Learn About Me",
-    "feature1Title": "Life Path Numbers",
-    "feature1Body": "Discover your core life purpose and destiny through your birth date.",
-    "feature2Title": "Personal Readings",
-    "feature2Body": "Get personalized insights into your relationships, career, and life decisions.",
-    "feature3Title": "Spiritual Guidance",
-    "feature3Body": "Connect with your higher self and find clarity in life's challenges.",
     "dorisAlt": "Doris Tzadok – Professional Numerologist",
     "trustLine": "40+ years of experience in education and personal guidance"
   },
@@ -44,6 +38,8 @@
     "storyContent": "For over 15 years, I have dedicated my life to studying the profound connections between numbers and human destiny. My journey began when I discovered how the numbers in my own birth date revealed patterns that explained my life experiences and guided me toward my true calling.",
     "approachTitle": "My Approach",
     "approachContent": "Each reading is a sacred journey of discovery. I combine traditional numerological methods with intuitive insights to provide you with practical guidance that you can apply to your daily life. My goal is to empower you with knowledge and clarity.",
+    "therapyTitle": "Training in Consciousness Therapy",
+    "therapyContent": "I believe that awareness is the key to change. Along my personal and professional journey, I studied consciousness therapy that combines deep work on patterns and thoughts, and I poured it into the world of numerology. Together, these tools make it possible not only to identify your personal potential and purpose through numbers, but also to release the barriers that hold you back and create real movement in life.",
     "credentialsTitle": "My Credentials",
     "credentialsContent": "I am a certified numerologist with extensive training in both Western and Eastern numerological traditions. I have helped thousands of individuals discover their life path numbers, understand their personal year cycles, and make informed decisions about their future.",
     "ctaTitle": "Ready to Discover Your Numbers?",
@@ -74,17 +70,18 @@
     "title": "Testimonials",
     "body": "Real recommendations from clients — shared via WhatsApp",
     "chatTitle": "Client recommendations",
-    "chatSubtitle": "Anonymous users",
     "chatAriaLabel": "WhatsApp-style testimonials",
-    "anonymousSender": "Anonymous user",
     "items": [
       {
+        "sender": "Ron Artzi",
         "text": "Doris is amazing and deeply professional. I came to her skeptical and left surprised by the accuracy. She is full of positive energy and gives a wonderful feeling and a lot of confidence. I recommend her with all my heart ❤️❤️❤️"
       },
       {
+        "sender": "Dina Blumenkranz",
         "text": "I came to Doris out of curiosity and received far more than I expected.\nWith warmth, sensitivity, and amazing accuracy, Doris saw the deepest things — strengths, dilemmas, and the right directions for me.\n\nThe session was fascinating, empowering, and precise, and left me with clarity, confidence, and real tools for the road ahead.\nBeyond great professionalism, Doris has a rare ability to listen, hold space, and guide from an authentic, human place.\n\nI wholeheartedly recommend her to anyone seeking guidance, precision, and meaningful life insights."
       },
       {
+        "sender": "Karin Rosenberg",
         "text": "An amazing experience! Doris is professional, precise, and very sensitive.\nI felt that things simply connected for me in the most right way.\nI got answers to many questions that had accompanied me.\nWarmly recommended to anyone seeking guidance."
       }
     ]

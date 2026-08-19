@@ -40,6 +40,15 @@ function About() {
 
         <section className="glass-card p-8">
           <h3 className="mb-4 text-2xl font-semibold text-white/95">
+            {t("therapyTitle")}
+          </h3>
+          <p className="whitespace-pre-line leading-relaxed text-white/85">
+            {t("therapyContent")}
+          </p>
+        </section>
+
+        <section className="glass-card p-8">
+          <h3 className="mb-4 text-2xl font-semibold text-white/95">
             {t("credentialsTitle")}
           </h3>
           <p className="whitespace-pre-line leading-relaxed text-white/85">

@@ -4,12 +4,6 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { useRouter } from "@/i18n/navigation";
 
-const features = [
-  { badge: "1", titleKey: "feature1Title" as const, bodyKey: "feature1Body" as const },
-  { badge: "7", titleKey: "feature2Title" as const, bodyKey: "feature2Body" as const },
-  { badge: "9", titleKey: "feature3Title" as const, bodyKey: "feature3Body" as const },
-];
-
 function Home() {
   const t = useTranslations("Home");
   const router = useRouter();
@@ -71,21 +65,6 @@ function Home() {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="mx-auto grid max-w-6xl gap-8 px-4 py-16 md:grid-cols-3">
-        {features.map(({ badge, titleKey, bodyKey }) => (
-          <div
-            key={titleKey}
-            className="glass-card p-8 text-center text-white transition-all duration-300 hover:-translate-y-2 hover:border-gold/35 hover:bg-white/12 hover:shadow-xl"
-          >
-            <span className="number-badge">{badge}</span>
-            <h3 className="mb-4 text-xl font-semibold text-white/95">
-              {t(titleKey)}
-            </h3>
-            <p className="text-white/80">{t(bodyKey)}</p>
-          </div>
-        ))}
       </div>
     </div>
   );
