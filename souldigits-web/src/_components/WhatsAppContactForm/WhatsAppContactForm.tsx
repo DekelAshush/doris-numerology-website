@@ -121,12 +121,12 @@ function WhatsAppContactForm() {
       </h2>
 
       {status === "success" && (
-        <p className="mb-4 rounded-lg bg-green-50 px-3 py-2 text-sm text-green-700">
+        <p className="mb-4 rounded-lg border border-green-300 bg-green-100 px-3 py-2 text-sm font-medium !text-green-900">
           {t("success")}
         </p>
       )}
       {status === "error" && (
-        <p className="mb-4 rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700">
+        <p className="mb-4 rounded-lg border border-red-300 bg-red-100 px-3 py-2 text-sm font-medium !text-red-900">
           {t("error")}
         </p>
       )}
