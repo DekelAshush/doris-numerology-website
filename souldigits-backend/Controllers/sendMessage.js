@@ -57,6 +57,22 @@ const sendMessage = async (req, res) => {
 
   const envTemplateName = process.env.WHATSAPP_TEMPLATE_NAME?.trim();
   const envTemplateLang = process.env.WHATSAPP_TEMPLATE_LANGUAGE?.trim() || 'he';
+
+  // A structured website inquiry MUST go out as an approved template so it
+  // delivers outside the 24h customer-service window. If the template isn't
+  // configured, fail loudly instead of silently sending an undeliverable
+  // plain-text message.
+  if (hasStructured && !hasRawBody && !wantsTemplate && !envTemplateName) {
+    console.error(
+      'WHATSAPP_TEMPLATE_NAME is not set — cannot send website inquiry as a template.',
+    );
+    return res.status(500).json({
+      error: 'WhatsApp template not configured',
+      missing: ['WHATSAPP_TEMPLATE_NAME'],
+      hint: 'Set WHATSAPP_TEMPLATE_NAME (and WHATSAPP_TEMPLATE_LANGUAGE) on the server so form inquiries deliver outside the 24h window.',
+    });
+  }
+
   const useEnvTemplate = Boolean(envTemplateName && hasStructured && !hasRawBody);
 
   try {
