@@ -1,0 +1,18 @@
+name = "souldigits-whatsapp"
+main = "src/index.js"
+compatibility_date = "2026-09-10"
+
+# Non-secret defaults. Override per environment if needed.
+# FRONTEND_URL can be comma-separated (prod + local).
+[vars]
+FRONTEND_URL = "https://www.doris-numerology.co.il,https://doris-numerology.co.il,http://localhost:3000"
+WHATSAPP_TEMPLATE_LANGUAGE = "he"
+
+# Secrets — set with:
+#   npx wrangler secret put WHATSAPP_TOKEN
+#   npx wrangler secret put WHATSAPP_PHONE_NUMBER_ID
+#   npx wrangler secret put WHATSAPP_BUSINESS_NUMBER
+#   npx wrangler secret put WHATSAPP_TEMPLATE_NAME
+#   npx wrangler secret put WHATSAPP_VERIFY_TOKEN
+#
+# Locally, copy .dev.vars.example → .dev.vars

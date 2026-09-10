@@ -27,22 +27,21 @@ function Services() {
           </p>
         </div>
 
-        <h3 className="mb-8 text-center text-2xl font-semibold text-white/95">
-          {t("servicesTitle")}
-        </h3>
+        <div className="glass-card p-8">
+          <h3 className="mb-8 text-center text-2xl font-semibold text-white/95">
+            {t("servicesTitle")}
+          </h3>
 
-        <div className="grid gap-6 md:grid-cols-2">
-          {items.map((service, index) => (
-            <div
-              key={index}
-              className="glass-card p-6 transition-all duration-300 hover:-translate-y-2 hover:bg-white/15 hover:shadow-xl"
-            >
-              <h4 className="mb-3 text-xl font-semibold text-white/95">
-                {service.title}
-              </h4>
-              <p className="text-white/80">{service.description}</p>
-            </div>
-          ))}
+          <div className="grid gap-8 md:grid-cols-2">
+            {items.map((service, index) => (
+              <div key={index}>
+                <h4 className="mb-2 text-xl font-semibold text-white/95">
+                  {service.title}
+                </h4>
+                <p className="text-white/80">{service.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>

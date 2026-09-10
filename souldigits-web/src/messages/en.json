@@ -48,19 +48,43 @@
   },
   "Services": {
     "metaTitle": "Numerology Services | Doris Tzadok",
-    "metaDescription": "Personal numerology consultations and guidance for important life decisions in relationships, career, and location — with Doris Tzadok.",
+    "metaDescription": "Personal potential, clearing blocks, couple matching, career guidance, timing, business consulting, health and baby naming — with Doris Tzadok.",
     "title": "Our Services",
     "subtitle": "Discover Your Path Through Numerology",
     "description": "I believe that every person is born with unique potential and a purpose in life. Numerology is a powerful tool that can help us understand our personal map, where our strengths lie, what our challenges are, and how we can live more fulfilling and meaningful lives.",
     "servicesTitle": "What I Offer",
     "items": [
       {
-        "title": "Personal Numerology Consultation",
-        "description": "In-depth analysis of your personal numbers and revealing the potential, challenges, and opportunities in your life."
+        "title": "Personal Potential",
+        "description": "Reveal your strengths, purpose, and natural directions through your numerology chart."
       },
       {
-        "title": "Important Life Decisions",
-        "description": "Guidance in making important decisions about location, relationships, and career paths."
+        "title": "Clearing Blocks",
+        "description": "Identify what is holding you back and receive practical guidance to release it."
+      },
+      {
+        "title": "Couple Compatibility",
+        "description": "Explore the match between partners, understand the relationship dynamic, and strengthen the bond."
+      },
+      {
+        "title": "Career Guidance",
+        "description": "Choose a professional direction and make career decisions according to your personal numbers."
+      },
+      {
+        "title": "Timing Forecasts",
+        "description": "Identify favorable periods for decisions, changes, and new beginnings."
+      },
+      {
+        "title": "Business Consulting",
+        "description": "Numerology guidance for your business: partnerships, timing, branding, and strategic choices."
+      },
+      {
+        "title": "Health",
+        "description": "A numerological view of health themes."
+      },
+      {
+        "title": "Baby Naming",
+        "description": "Guidance choosing a name for a newborn."
       }
     ]
   },
